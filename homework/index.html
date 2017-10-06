@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+html
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport"
@@ -9,10 +10,72 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<h1 class="some-class">Введення в CSS</h1>
-<h2>Способи додавання CSS на сторінку</h2>
-<div class=""></div>
-p <some-class></some-class>
-
+body
+html body
+html > body
+<h1 id="some-id" class="class-h">Введення в CSS</h1>
+h1
+body > h1
+body h1
+html h1
+html body h1
+<h2 class="class-h">Способи додавання CSS на сторінку</h2>
+h2
+body > h2
+body h2
+html h2
+html body h2
+body h1 + h2
+<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, veritatis!</div>
+div
+body > div
+body div
+html div
+html body div
+body h2 + div
+<p lang="en">Lorem ipsum dolor.</p>
+p
+html p
+body p
+body > p
+html body p
+div + p
+body div + p
+html div + p
+<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi omnis recusandae reiciendis tenetur ut.</span>
+body > span
+p + span
+html p + span
+body p + span
+body > p + span
+<ul>
+  <li><span>Lorem ipsum.</span></li>
+  ul span
+  body ul span
+  <li>Lorem ipsum dolor sit amet.</li>
+  ul li + li
+  ul span + li
+</ul>
+ul
+body ul
+body > ul
+html body ul
+html ul
+span + ul
+body span + ul
+body > span + ul
+<ol>
+  <li class="some-class"><span>Lorem ipsum.</span></li>
+  ol span
+  body ol span
+  ol > li span
+</ol>
+ol
+body ol
+body > ol
+html body ol
+html ol
+body > ul + ol
+body ul + ol
 </body>
 </html>
