@@ -19,6 +19,9 @@ body > h1
 body h1
 html h1
 html body h1
+.class-h h1
+#some-id
+.class-h h1 body
 <h2 class="class-h">Способи додавання CSS на сторінку</h2>
 h2
 body > h2
@@ -26,6 +29,9 @@ body h2
 html h2
 html body h2
 body h1 + h2
+.class-h h2
+.class-h h1 + h2
+.class-h h2 body
 <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, veritatis!</div>
 div
 body > div
@@ -42,6 +48,9 @@ html body p
 div + p
 body div + p
 html div + p
+[lang]
+[lang="en"]
+[lang*="e"]
 <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi omnis recusandae reiciendis tenetur ut.</span>
 body > span
 p + span
@@ -69,6 +78,9 @@ body > span + ul
   ol span
   body ol span
   ol > li span
+  .some-class
+  .some-class li
+  .some-class li body
 </ol>
 ol
 body ol
