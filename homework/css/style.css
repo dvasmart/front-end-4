@@ -1,8 +1,137 @@
-.one {
-    height: 34px;
+body {
+    font-family: "Montserrat", Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+.header-top {
     background-color: #2b2b2b;
 }
-.two {
-    height: 168px;
+.content {
+    width: 1170px;
+    margin: 0 auto;
+}
+a {
+    text-decoration: none;
+}
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 0;
+}
+.number {
+    font-weight: 300;
+    font-size: 0.875rem;
+    color: #7f7f7f;
+    line-height: 1.5;
+    float: left;
+    padding: 7px;
+    padding-left: 0;
+}
+.login {
+    font-weight: 400;
+    font-size: 0.875rem;
+    color: #666666;
+    line-height: 1.5;
+    padding: 7px 10px;
+    display: inline-block;
+}
+.user {
+    float: right;
+    font-weight: 400;
+    font-size: 0.75rem;
+    color: #3b3b3b;
+    line-height: 1.5;
+}
+.header-bottom {
     background-color: #232323;
+}
+.logo {
+    margin-top: 32px;
+    display: inline-block;
+}
+.search {
+    float: right;
+    margin-top: 30px;
+    border: 1px solid #323232;
+}
+.search button {
+    height: 45px;
+    width: 60px;
+    background: transparent url(../img/search.png) center center no-repeat;
+    border: none;
+    float: right;
+    padding: 0;
+    outline: none;
+}
+.search input {
+    height: 45px;
+    width: 200px;
+    color: #666666;
+    background: transparent;
+    border: none;
+    padding: 15px 0 15px 25px;
+    font-weight: 300;
+    font-size: 0.8125rem;
+    line-height: 1.5;
+    outline: none;
+}
+
+.navigation ul {
+    padding-left: 0;
+    float: left;
+    margin: 7px 0 14px 0;
+}
+.navigation li {
+    list-style-type: none;
+    display: inline-block;
+}
+.menu {
+    color: #ffffff;
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: 20px;
+    display: inline-block;
+}
+.navigation ul li:first-child a {
+    padding-left: 0;
+}
+.menu:hover {
+    color: #be926f;
+}
+.bag {
+    float: right;
+    padding: 20px;
+    padding-right: 10px;
+    margin: 7px 0 14px 0;
+}
+.main {
+    background-color: #f7f7f7;
+}
+.main-top {
+    background-color: #e7e7e7;
+    margin-top: 30px;
+}
+.home-contact {
+    float: right;
+    color: #999999;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    text-transform: uppercase;
+    margin: 29.5px 15px;
+}
+.home-contact a {
+    color: #666666;
+    padding: 20px 5px;
+    display: inline-block;
+}
+.home-contact a:hover {
+    color: #999999;
+}
+.contactus {
+    float: left;
+    font-size: 1.875rem;
+    line-height: 1.5;
+    color: #232323;
+    text-transform: uppercase;
+    padding: 37.5px 25px;
 }
