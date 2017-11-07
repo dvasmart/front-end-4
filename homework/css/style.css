@@ -85,7 +85,7 @@ a {
     list-style-type: none;
     display: inline-block;
 }
-.menu {
+.menu a {
     color: #ffffff;
     font-size: 1rem;
     line-height: 1.5;
@@ -95,7 +95,7 @@ a {
 .navigation ul li:first-child a {
     padding-left: 0;
 }
-.menu:hover {
+.menu a:hover {
     color: #be926f;
 }
 .bag {
@@ -121,8 +121,22 @@ a {
 }
 .home-contact a {
     color: #666666;
-    padding: 20px 5px;
+    padding: 20px 8px;
     display: inline-block;
+    position: relative;
+}
+.home-contact a:after {
+    content:'';
+    background: transparent url("../img/slash.png") center center no-repeat;
+    height: 14px;
+    width: 6px;
+    position: absolute;
+    top: 50%;
+    margin-top: -7px;
+    margin-left: 6px;
+}
+.home-contact a:last-child:after {
+    display: none;
 }
 .home-contact a:hover {
     color: #999999;
