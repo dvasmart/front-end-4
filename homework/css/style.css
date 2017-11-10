@@ -12,24 +12,22 @@ a {
     text-decoration: none;
 }
 .clearfix:after {
-    content: ".";
+    content: "";
     display: block;
     clear: both;
-    visibility: hidden;
-    height: 0;
 }
 .number {
     font-weight: 300;
-    font-size: 0.875rem;
+    font-size: .875rem;
     color: #7f7f7f;
-    line-height: 1.5;
+    line-height: 1.3;
     float: left;
     padding: 7px;
     padding-left: 0;
 }
-.login {
+.log-in {
     font-weight: 400;
-    font-size: 0.875rem;
+    font-size: .875rem;
     color: #666666;
     line-height: 1.5;
     padding: 7px 10px;
@@ -38,7 +36,7 @@ a {
 .user {
     float: right;
     font-weight: 400;
-    font-size: 0.75rem;
+    font-size: .75rem;
     color: #3b3b3b;
     line-height: 1.5;
 }
@@ -58,24 +56,24 @@ a {
     height: 45px;
     width: 60px;
     background: transparent url(../img/search.png) center center no-repeat;
-    border: none;
     float: right;
     padding: 0;
-    outline: none;
 }
 .search input {
     height: 45px;
     width: 200px;
     color: #666666;
     background: transparent;
-    border: none;
     padding: 15px 0 15px 25px;
     font-weight: 300;
-    font-size: 0.8125rem;
+    font-size: .8125rem;
     line-height: 1.5;
-    outline: none;
 }
-
+.search button,
+.search input {
+    outline: none;
+    border: none;
+}
 .navigation ul {
     padding-left: 0;
     float: left;
@@ -92,6 +90,9 @@ a {
     padding: 20px;
     display: inline-block;
 }
+.menu a.active {
+    color: #be926f;
+}
 .navigation ul li:first-child a {
     padding-left: 0;
 }
@@ -103,6 +104,23 @@ a {
     padding: 20px;
     padding-right: 10px;
     margin: 7px 0 14px 0;
+    position: relative;
+    display: block;
+    background: transparent url(../img/bag.png) center center no-repeat;
+}
+.counter {
+    position: absolute;
+    top: 3px;
+    right: 0;
+    background: #be926f;
+    height: 16px;
+    width: 15px;
+    border-radius: 50%;
+    display: block;
+    color: #232323;
+    font-size: .75rem;
+    line-height: 1.5;
+    text-align: center;
 }
 .main {
     background-color: #f7f7f7;
@@ -114,7 +132,7 @@ a {
 .home-contact {
     float: right;
     color: #999999;
-    font-size: 0.875rem;
+    font-size: .875rem;
     line-height: 1.5;
     text-transform: uppercase;
     margin: 29.5px 15px;
@@ -141,7 +159,7 @@ a {
 .home-contact a:hover {
     color: #999999;
 }
-.contactus {
+.contact-us {
     float: left;
     font-size: 1.875rem;
     line-height: 1.5;
