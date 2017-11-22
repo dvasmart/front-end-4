@@ -5,13 +5,13 @@ body {
     background-color: #2b2b2b;
 }
 .content {
-    width: 1170px;
+    max-width: 1170px;
     margin: 0 auto;
 }
 a {
     text-decoration: none;
 }
-.clearfix:after {
+.clearfix::after {
     content: "";
     display: block;
     clear: both;
@@ -47,10 +47,22 @@ a {
     margin-top: 32px;
     display: inline-block;
 }
+@media (max-width: 450px) {
+    .logo {
+        width: 100%;
+        text-align: center;    
+    }
+}
 .search {
     float: right;
     margin-top: 30px;
     border: 1px solid #323232;
+}
+@media (max-width: 450px) {
+    .search {
+        float: none;
+        margin-top: 20px;                   
+    }
 }
 .search button {
     height: 45px;
@@ -58,6 +70,7 @@ a {
     background: transparent url(../img/search.png) center center no-repeat;
     float: right;
     padding: 0;
+    cursor: pointer;
 }
 .search input {
     height: 45px;
@@ -79,9 +92,22 @@ a {
     float: left;
     margin: 7px 0 14px 0;
 }
+@media (max-width: 650px) {
+    .navigation ul {
+        float: none;
+        margin: 5px;              
+    }
+}
 .navigation li {
     list-style-type: none;
     display: inline-block;
+}
+@media (max-width: 650px) {
+    .navigation li {
+        display: block;
+        text-align: center;
+        margin: 5px;               
+    }
 }
 .menu a {
     color: #ffffff;
@@ -96,6 +122,11 @@ a {
 .navigation ul li:first-child a {
     padding-left: 0;
 }
+@media (max-width: 650px) {
+    .navigation ul li:first-child a {
+        padding-left: 20px;        
+    }
+}
 .menu a:hover {
     color: #be926f;
 }
@@ -107,6 +138,15 @@ a {
     position: relative;
     display: block;
     background: transparent url(../img/bag.png) center center no-repeat;
+}
+@media (max-width: 650px) {
+    .bag {
+        display: block;
+        float: none;
+        width: 0;
+        margin: 0 auto;
+        padding: 40px;       
+    }
 }
 .counter {
     position: absolute;
@@ -122,12 +162,23 @@ a {
     line-height: 1.5;
     text-align: center;
 }
+@media (max-width: 650px) {
+    .counter {
+        top: 21px;
+        right: 25px;       
+    }
+}
 .main {
     background-color: #f7f7f7;
 }
 .main-top {
     background-color: #e7e7e7;
     margin-top: 30px;
+}
+@media (max-width: 650px) {
+    .main-top {
+        margin-top: 0;     
+    }
 }
 .home-contact {
     float: right;
@@ -136,6 +187,12 @@ a {
     line-height: 1.5;
     text-transform: uppercase;
     margin: 29.5px 15px;
+}
+@media (max-width: 650px) {
+    .home-contact {
+        float:  none;
+        text-align: center;     
+    }
 }
 .home-contact a {
     color: #666666;
@@ -166,4 +223,10 @@ a {
     color: #232323;
     text-transform: uppercase;
     padding: 37.5px 25px;
+}
+@media (max-width: 650px) {
+    .contact-us {
+        float:  none;
+        text-align: center;            
+    }
 }
