@@ -1,5 +1,6 @@
 body {
     font-family: "Montserrat", Arial, "Helvetica Neue", Helvetica, sans-serif;
+    min-width: 320px;
 }
 .header-top {
     background-color: #2b2b2b;
@@ -7,6 +8,7 @@ body {
 .content {
     max-width: 1170px;
     margin: 0 auto;
+    padding: 0 15px;
 }
 a {
     text-decoration: none;
@@ -25,6 +27,14 @@ a {
     padding: 7px;
     padding-left: 0;
 }
+@media (max-width: 460px) {
+    .number {
+        float: none;
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+    }
+}
 .log-in {
     font-weight: 400;
     font-size: .875rem;
@@ -40,6 +50,13 @@ a {
     color: #3b3b3b;
     line-height: 1.5;
 }
+@media (max-width: 460px) {
+    .user {
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+}
 .header-bottom {
     background-color: #232323;
 }
@@ -47,10 +64,11 @@ a {
     margin-top: 32px;
     display: inline-block;
 }
-@media (max-width: 450px) {
+@media (max-width: 460px) {
     .logo {
         width: 100%;
-        text-align: center;    
+        text-align: center;
+        margin-top: 20px;
     }
 }
 .search {
@@ -58,10 +76,10 @@ a {
     margin-top: 30px;
     border: 1px solid #323232;
 }
-@media (max-width: 450px) {
+@media (max-width: 460px) {
     .search {
         float: none;
-        margin-top: 20px;                   
+        margin-top: 10px;
     }
 }
 .search button {
@@ -75,12 +93,18 @@ a {
 .search input {
     height: 45px;
     width: 200px;
-    color: #666666;
+    color: #ffffff;
     background: transparent;
     padding: 15px 0 15px 25px;
     font-weight: 300;
     font-size: .8125rem;
     line-height: 1.5;
+    font-family: inherit;
+}
+@media (max-width: 460px) {
+    .search input {
+        width: 225px;
+    }
 }
 .search button,
 .search input {
@@ -92,21 +116,20 @@ a {
     float: left;
     margin: 7px 0 14px 0;
 }
-@media (max-width: 650px) {
+@media (max-width: 675px) {
     .navigation ul {
         float: none;
-        margin: 5px;              
+        margin: 5px;
     }
 }
 .navigation li {
     list-style-type: none;
     display: inline-block;
 }
-@media (max-width: 650px) {
+@media (max-width: 675px) {
     .navigation li {
         display: block;
         text-align: center;
-        margin: 5px;               
     }
 }
 .menu a {
@@ -116,15 +139,22 @@ a {
     padding: 20px;
     display: inline-block;
 }
+@media (max-width: 675px) {
+    .menu a {
+        padding: 15px 100px;
+    }
+}
 .menu a.active {
     color: #be926f;
 }
 .navigation ul li:first-child a {
     padding-left: 0;
 }
-@media (max-width: 650px) {
+@media (max-width: 675px) {
     .navigation ul li:first-child a {
-        padding-left: 20px;        
+        /* padding-left: 20px;         */
+        text-align: center;
+        width: 100%;
     }
 }
 .menu a:hover {
@@ -139,13 +169,13 @@ a {
     display: block;
     background: transparent url(../img/bag.png) center center no-repeat;
 }
-@media (max-width: 650px) {
+@media (max-width: 675px) {
     .bag {
         display: block;
         float: none;
         width: 0;
         margin: 0 auto;
-        padding: 40px;       
+        padding: 40px;
     }
 }
 .counter {
@@ -162,10 +192,10 @@ a {
     line-height: 1.5;
     text-align: center;
 }
-@media (max-width: 650px) {
+@media (max-width: 675px) {
     .counter {
         top: 21px;
-        right: 25px;       
+        right: 25px;
     }
 }
 .main {
@@ -173,11 +203,11 @@ a {
 }
 .main-top {
     background-color: #e7e7e7;
-    margin-top: 30px;
+    /* margin-top: 30px; */
 }
-@media (max-width: 650px) {
+@media (max-width: 675px) {
     .main-top {
-        margin-top: 0;     
+        margin-top: 0;
     }
 }
 .home-contact {
@@ -188,10 +218,11 @@ a {
     text-transform: uppercase;
     margin: 29.5px 15px;
 }
-@media (max-width: 650px) {
+@media (max-width: 675px) {
     .home-contact {
         float:  none;
-        text-align: center;     
+        text-align: center;
+        margin: 5px 15px;
     }
 }
 .home-contact a {
@@ -224,9 +255,10 @@ a {
     text-transform: uppercase;
     padding: 37.5px 25px;
 }
-@media (max-width: 650px) {
+@media (max-width: 675px) {
     .contact-us {
         float:  none;
-        text-align: center;            
+        text-align: center;
+        padding: 20px 25px;
     }
 }
