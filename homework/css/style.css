@@ -1,6 +1,9 @@
+html {
+    font-size: 16px;
+}
 body {
-    font-family: "Montserrat", Arial, "Helvetica Neue", Helvetica, sans-serif;
     min-width: 320px;
+    font-family: "Montserrat", Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 .header-top {
     background-color: #2b2b2b;
@@ -8,257 +11,152 @@ body {
 .content {
     max-width: 1170px;
     margin: 0 auto;
-    padding: 0 15px;
 }
-a {
+a:hover  {
     text-decoration: none;
-}
-.clearfix::after {
-    content: "";
-    display: block;
-    clear: both;
+    color: #ffffff;
 }
 .number {
+    display: block;
+    text-align: center;
+    padding: 6px;
+    line-height: 1.5;
     font-weight: 300;
     font-size: .875rem;
     color: #7f7f7f;
-    line-height: 1.3;
-    float: left;
-    padding: 7px;
-    padding-left: 0;
-}
-@media (max-width: 460px) {
-    .number {
-        float: none;
-        display: inline-block;
-        width: 100%;
-        text-align: center;
-    }
-}
-.log-in {
-    font-weight: 400;
-    font-size: .875rem;
-    color: #666666;
-    line-height: 1.5;
-    padding: 7px 10px;
-    display: inline-block;
 }
 .user {
     float: right;
+    text-align: center;
+    line-height: 1.5;
     font-weight: 400;
     font-size: .75rem;
     color: #3b3b3b;
-    line-height: 1.5;
 }
-@media (max-width: 460px) {
-    .user {
-        float: none;
-        width: 100%;
-        text-align: center;
-    }
+.log-in {
+    display: inline-block;
+    padding: 6px;
+    line-height: 1.5;
+    font-weight: 400;
+    font-size: .875rem;
+    color: #666666;
 }
 .header-bottom {
     background-color: #232323;
 }
 .logo {
-    margin-top: 32px;
-    display: inline-block;
+    display: block;
+    text-align: center;
+    margin-top: 31px;
+    padding-left: 15px;
 }
-@media (max-width: 460px) {
-    .logo {
-        width: 100%;
-        text-align: center;
-        margin-top: 20px;
-    }
-}
-.search {
+.search {    
     float: right;
-    margin-top: 30px;
+}
+.search form {
+    float: none;
+    text-align: center;
+    margin-top: 31px;
     border: 1px solid #323232;
-}
-@media (max-width: 460px) {
-    .search {
-        float: none;
-        margin-top: 10px;
-    }
-}
-.search button {
-    height: 45px;
-    width: 60px;
-    background: transparent url(../img/search.png) center center no-repeat;
-    float: right;
-    padding: 0;
-    cursor: pointer;
 }
 .search input {
     height: 45px;
-    width: 200px;
+    line-height: 1.5;
     color: #ffffff;
     background: transparent;
-    padding: 15px 0 15px 25px;
     font-weight: 300;
     font-size: .8125rem;
-    line-height: 1.5;
     font-family: inherit;
 }
-@media (max-width: 460px) {
-    .search input {
-        width: 225px;
-    }
+.search button {
+    vertical-align: middle;
+    height: 45px;
+    width: 60px;
+    background: transparent url(../img/search.png) center center no-repeat;
+    cursor: pointer;
 }
 .search button,
 .search input {
     outline: none;
     border: none;
 }
-.navigation ul {
-    padding-left: 0;
-    float: left;
-    margin: 7px 0 14px 0;
+.navigation {
+    text-align: center;
+    margin-top: 10px;
 }
-@media (max-width: 675px) {
-    .navigation ul {
-        float: none;
-        margin: 5px;
-    }
-}
-.navigation li {
-    list-style-type: none;
-    display: inline-block;
-}
-@media (max-width: 675px) {
-    .navigation li {
-        display: block;
-        text-align: center;
-    }
-}
-.menu a {
+.navigation a {
+    display: block;
+    padding: 10px 0;
+    line-height: 1.5;
     color: #ffffff;
     font-size: 1rem;
-    line-height: 1.5;
-    padding: 20px;
-    display: inline-block;
 }
-@media (max-width: 675px) {
-    .menu a {
-        padding: 15px 100px;
-    }
-}
-.menu a.active {
+.navigation a.active {
     color: #be926f;
 }
-.navigation ul li:first-child a {
-    padding-left: 0;
-}
-@media (max-width: 675px) {
-    .navigation ul li:first-child a {
-        /* padding-left: 20px;         */
-        text-align: center;
-        width: 100%;
-    }
-}
-.menu a:hover {
+.navigation a:hover {
     color: #be926f;
 }
 .bag {
     float: right;
-    padding: 20px;
-    padding-right: 10px;
-    margin: 7px 0 14px 0;
+    text-align: center;
     position: relative;
-    display: block;
+    height: 50px;
     background: transparent url(../img/bag.png) center center no-repeat;
-}
-@media (max-width: 675px) {
-    .bag {
-        display: block;
-        float: none;
-        width: 0;
-        margin: 0 auto;
-        padding: 40px;
-    }
 }
 .counter {
     position: absolute;
-    top: 3px;
-    right: 0;
-    background: #be926f;
+    top: 15%;
+    right: 50%;
+    display: block;
     height: 16px;
     width: 15px;
     border-radius: 50%;
-    display: block;
+    line-height: 1.5;
+    background: #be926f;
     color: #232323;
     font-size: .75rem;
-    line-height: 1.5;
-    text-align: center;
-}
-@media (max-width: 675px) {
-    .counter {
-        top: 21px;
-        right: 25px;
-    }
-}
-.main {
-    background-color: #f7f7f7;
 }
 .main-top {
+    text-align: center;
     background-color: #e7e7e7;
-    /* margin-top: 30px; */
+    
 }
-@media (max-width: 675px) {
-    .main-top {
-        margin-top: 0;
-    }
+.contact-us {
+    padding: 10px 0;
+    font-size: 1.875rem;
+    line-height: 1.5;
+    text-transform: uppercase;
+    color: #232323;
 }
 .home-contact {
     float: right;
+    padding: 10px 0;
+    line-height: 1.5;
     color: #999999;
     font-size: .875rem;
-    line-height: 1.5;
     text-transform: uppercase;
-    margin: 29.5px 15px;
-}
-@media (max-width: 675px) {
-    .home-contact {
-        float:  none;
-        text-align: center;
-        margin: 5px 15px;
-    }
 }
 .home-contact a {
-    color: #666666;
-    padding: 20px 8px;
-    display: inline-block;
     position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 10px;
+    color: #666666;
 }
 .home-contact a:after {
     content:'';
-    background: transparent url("../img/slash.png") center center no-repeat;
-    height: 14px;
-    width: 6px;
     position: absolute;
     top: 50%;
-    margin-top: -7px;
-    margin-left: 6px;
+    margin-top: -8px;
+    margin-left: 9px;
+    height: 14px;
+    width: 6px;
+    background: transparent url("../img/slash.png") center center no-repeat;
 }
 .home-contact a:last-child:after {
     display: none;
 }
 .home-contact a:hover {
     color: #999999;
-}
-.contact-us {
-    float: left;
-    font-size: 1.875rem;
-    line-height: 1.5;
-    color: #232323;
-    text-transform: uppercase;
-    padding: 37.5px 25px;
-}
-@media (max-width: 675px) {
-    .contact-us {
-        float:  none;
-        text-align: center;
-        padding: 20px 25px;
-    }
 }
