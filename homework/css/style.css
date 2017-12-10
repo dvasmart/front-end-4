@@ -1,147 +1,195 @@
-html {
-    font-size: 16px;
-}
 body {
     min-width: 320px;
     font-family: "Montserrat", Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
-.header-top {
-    background-color: #2b2b2b;
-}
 .content {
     max-width: 1170px;
     margin: 0 auto;
+    padding: 0 15px;
 }
-a:hover  {
+a {
     text-decoration: none;
-    color: #ffffff;
+}
+a:hover {
+    color: #fff;
+}
+/* phone, log in & register buttons */
+.header-top {
+    background-color: #2b2b2b;    
+}
+.number-user {
+    display: flex;
+    justify-content: space-between;
+}
+@media (max-width: 705px) {
+    .number-user {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 .number {
-    display: block;
-    text-align: center;
-    padding: 6px;
-    line-height: 1.5;
+    padding: 7px;
     font-weight: 300;
     font-size: .875rem;
     color: #7f7f7f;
+    line-height: 1.3;
 }
 .user {
-    float: right;
-    text-align: center;
-    line-height: 1.5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     font-weight: 400;
     font-size: .75rem;
     color: #3b3b3b;
+    line-height: 1.5;
 }
 .log-in {
     display: inline-block;
-    padding: 6px;
-    line-height: 1.5;
     font-weight: 400;
     font-size: .875rem;
     color: #666666;
+    line-height: 1.5;
+    padding: 7px 10px;
 }
+/* logotype, search form */
 .header-bottom {
     background-color: #232323;
 }
+.logo-search {
+    display: flex;
+    justify-content: space-between;
+}
+@media (max-width: 705px) {
+    .logo-search {
+        flex-direction: column;
+        align-items: center;      
+    }
+}
 .logo {
-    display: block;
-    text-align: center;
-    margin-top: 31px;
-    padding-left: 15px;
+    display: inline-block;
+    margin-top: 32px;
 }
-.search {    
-    float: right;
-}
-.search form {
-    float: none;
-    text-align: center;
-    margin-top: 31px;
+.search {
+    margin-top: 30px;
     border: 1px solid #323232;
-}
-.search input {
-    height: 45px;
-    line-height: 1.5;
-    color: #ffffff;
-    background: transparent;
-    font-weight: 300;
-    font-size: .8125rem;
-    font-family: inherit;
 }
 .search button {
     vertical-align: middle;
     height: 45px;
     width: 60px;
-    background: transparent url(../img/search.png) center center no-repeat;
     cursor: pointer;
+    background: transparent url(../img/search.png) center center no-repeat;
+}
+.search input {
+    height: 45px;
+    width: 200px;
+    padding: 15px 0 15px 25px;
+    color: #ffffff;
+    background: transparent;
+    font-weight: 300;
+    font-size: .8125rem;
+    line-height: 1.5;
+    font-family: inherit;    
 }
 .search button,
 .search input {
     outline: none;
     border: none;
 }
+/* navigation menu, basket button */
 .navigation {
-    text-align: center;
-    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-.navigation a {
-    display: block;
-    padding: 10px 0;
-    line-height: 1.5;
+@media (max-width: 705px) {
+    .navigation {
+        flex-direction: column;
+    }
+}
+.navigation li {
+    list-style-type: none;
+}
+.menu {
+    display: flex;
+    margin-left: -40px;
+}
+@media (max-width: 705px) {
+    .menu {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+.menu a {
+    display: inline-block;
+    padding: 10px 20px;
     color: #ffffff;
     font-size: 1rem;
+    line-height: 1.5;
 }
-.navigation a.active {
+.menu a.active {
     color: #be926f;
 }
-.navigation a:hover {
+.menu a:hover {
     color: #be926f;
 }
 .bag {
-    float: right;
-    text-align: center;
+    display: block;
     position: relative;
-    height: 50px;
+    padding: 20px;
+    width: 20px;
+    height: 20px;
     background: transparent url(../img/bag.png) center center no-repeat;
 }
 .counter {
     position: absolute;
-    top: 15%;
-    right: 50%;
+    top: 11px;
+    right: 15px;
     display: block;
+    text-align: center;
     height: 16px;
     width: 15px;
     border-radius: 50%;
-    line-height: 1.5;
     background: #be926f;
     color: #232323;
     font-size: .75rem;
+    line-height: 1.5;
+}
+/* title contact us, home & contact buttons */
+.main {
+    background-color: #f7f7f7;    
 }
 .main-top {
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: #e7e7e7;
-    
+}
+@media (max-width: 705px) {
+    .main-top {
+        flex-direction: column;
+    }       
 }
 .contact-us {
-    padding: 10px 0;
+    display: inline-block;
+    padding: 20px;
     font-size: 1.875rem;
     line-height: 1.5;
-    text-transform: uppercase;
     color: #232323;
+    text-transform: uppercase;
 }
 .home-contact {
-    float: right;
-    padding: 10px 0;
-    line-height: 1.5;
+    display: inline-block;
+    padding: 20px;
     color: #999999;
     font-size: .875rem;
+    line-height: 1.5;
     text-transform: uppercase;
 }
 .home-contact a {
-    position: relative;
     display: inline-block;
-    vertical-align: middle;
-    padding: 10px;
+    position: relative;
+    padding: 20px 8px;
     color: #666666;
 }
 .home-contact a:after {
@@ -149,7 +197,7 @@ a:hover  {
     position: absolute;
     top: 50%;
     margin-top: -8px;
-    margin-left: 9px;
+    margin-left: 8px;
     height: 14px;
     width: 6px;
     background: transparent url("../img/slash.png") center center no-repeat;
