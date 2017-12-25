@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Блочна модель і позиціонування 
 ### Блочна модель
 1. Блочні і текстові елементи.
@@ -146,3 +147,7 @@
 - [Шпаргалка по шпаргалке по Flexbox](http://css-live.ru/articles-css/shpargalka-po-shpargalke-po-flexbox.html)
 - [Грядут гриды!](http://css-live.ru/verstka/gryadut-gridy.html)
 >>>>>>> 3342ffe381fb0260d6cd6694fa30c9fdfbd53e15
+=======
+## Курс по основах Front end від [IT Академії stfalcon.com](http://academy.stfalcon.com) 
+> Ця вітка створення для того, щоб заливати фінальну роботу.
+>>>>>>> b9fea004830082f33d433b03bacda47b121398ac
