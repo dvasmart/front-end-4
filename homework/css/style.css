@@ -28,10 +28,11 @@ a {
 .home-header > a {
     display: inline-block;
     padding: 24px 0;
-    border-bottom: 2px solid #44433e;
+    border-bottom: 2px solid transparent;
 }
 .home-header nav {
     display: flex;
+    position: relative;
 }
 .home-header ul {
     display: flex;
@@ -45,31 +46,64 @@ a {
     font-size: 13px;
     text-transform: uppercase;
     font-weight: 700;
-    border-bottom: 2px solid #44433e;
+    border-bottom: 2px solid transparent;
 }
-.home-header > a:hover,
-.home-header li a:hover,
-.home-header button:hover {
-    border-bottom-color: #18cfab;
-    color: #18cfab;
-}
+/* .home-header {background: #B46381;} */
 .home-header form {
-    display: flex;
-    align-items: center;
-    padding: 50 19px;
+    height: 120px;
+    color: #a5a5a5;
+    font-size: 13px;
+    border-bottom: 2px solid transparent;
+}
+.home-header input {
+    height: 120px;
+    width: 0;
+    padding: 0 42px 0 15px;
+    border: none;
+    border-bottom: 2px solid transparent;
+    outline: none;
+    background: transparent;
+    transition: .4s cubic-bezier(0, 0.8, 0, 1);
+    position: absolute;
+    top: 0px;
+    right: -19px;
+    z-index: 2;
+}
+.home-header input:focus {
+    width: 675px;
+    z-index: 1;
+    border-bottom: 2px solid #F9F0DA;
+    background: #fff;
+    height: 55px;
+    top: 33px;
+    right: 42px;
+    color: #a5a5a5;
+    font-size: 13px;
 }
 .home-header button {
-    display: inline-block;
+    background: transparent url(../img/search.png) center center no-repeat;
+    border: none;
     vertical-align: middle;
     height: 120px;
     width: 42px;
-    cursor: pointer;
-    background: transparent url(../img/search.png) center center no-repeat;
     outline: none;
-    border: none;
-    border-bottom: 2px solid #44433e;
+    position: relative;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+.home-header button:before {
+    content: "";
+    color: #a5a5a5;
+    font-size: 13px;
 }
 .home-header button:active {
+    border-bottom-color: #18cfab;
+    color: #18cfab;
+} 
+.home-header > a:hover,
+.home-header li a:hover,
+.home-header form:hover {
     border-bottom-color: #18cfab;
     color: #18cfab;
 }
@@ -119,11 +153,16 @@ a {
     margin: 0 14px;
     border-top: 5px solid #18cfab;
 }
+.home-main a:last-child {
+    background: #00cbf6;
+    border-top: 5px solid #00cbf6;
+}
 .home-main a:active {
     border-top-color: #fff;
 }
+
 /* home - 4 pictures */
-.home-bottom {
+.home-bottom {    
     display: flex;
     height: 375px;
     font-weight: 700;
@@ -155,15 +194,15 @@ a {
 .about-header {
     font-weight: 300;
     padding: 100px 15px;
+    text-transform: capitalize;
 }
 .about-header h2{
-    text-transform: capitalize;
     font-size: 36px;
-    line-height: 40px;
     text-align: center;
     display: block;
     position: relative;
     padding-bottom: 36px;
+    margin-bottom: 65px;
 }
 .about-header h2::before {
     content: "";
@@ -187,13 +226,16 @@ a {
     display: inline-block;
 }
 .about-header span {
-    text-transform: capitalize;
     font-weight: 700;
     font-size: 18px;
-    line-height: 40px;
     color: #717171;
+    padding-left: 15px;
 }
-/* about-main - tabs, 3 pictures */
+.about-header p {
+    line-height: 1.5;
+    text-transform: none;
+}
+/* about-main - 3 pictures */
 .about-main-background-image {
     background: url('..//img/phone.jpg') center center no-repeat;
 }
@@ -254,6 +296,7 @@ a {
 /* skills - title, slider */
 .skills {
     text-align: center;
+    margin: 100px auto;
 }
 .skills h2 {
     text-transform: capitalize;
@@ -307,8 +350,8 @@ a {
     display: inline-block;
     padding: 25px 35px 30px;
     border-radius: 5px;
-    margin: 0 14px;
-    border-top: 5px solid #18cfab;
+    margin-top: 75px;
+    border-top: 5px solid transparent;
     text-transform: uppercase;
 }
 .skills span {
@@ -317,9 +360,10 @@ a {
 /* service - */
 .service {
     text-align: center;
+    margin: 100px auto;
 }
 .service h2 {
-    text-align: center;
+    margin-bottom: 65px;
     text-transform: capitalize;
     color: #4e4e4e;
     font-size: 36px;
@@ -346,21 +390,38 @@ a {
     border-bottom: 1px solid #18cfab;
     width: 76px;
 }
-.service ul {
-    display: flex;
+ul.tabs {
     list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
-.service a {
-    border: 1px solid #ebebeb;
+ul.tabs li {
+    border: 1px solid #d1f5ee;
     font-size: 16px;
     color: #717171;
     display: inline-block;
     padding: 25px;
     text-transform: capitalize;
+    cursor: pointer;
+    float: left;
+    margin: 0;
 }
-.service a:hover {
-    border-top-color: #18cfab;
+ul.tabs li a {
+    color: #717171;
+    text-decoration: none;
+}
+ul.tabs li.active a {
     color: #fff;
+}
+ul.tabs li.active {
+    background: #18cfab;
+}
+.clr {
+    clear: both;
+}
+.block article {
+    padding-top: 25px;
+    text-align: start;
 }
 /* work - title, button */
 .work-background-image {
@@ -394,7 +455,7 @@ a {
     font-size: 13px;
     font-weight: 700;
     color: #fff;
-
+    
     display: inline-block;
     padding: 25px 35px 30px;
     border-radius: 5px;
@@ -477,10 +538,10 @@ a {
     border-right: 1px solid #777;
 }
 .blog article:hover p {
-    color: #18cfab;
+        color: #18cfab;
 }
 .blog article:hover div {
-    background: #18cfab;
+        background: #18cfab;
 }
 /* testimonial - 4 statistic buttons */
 .testimonial {
@@ -650,7 +711,7 @@ a {
 .comment img {
     display: inline-blocks;
     margin: 0 auto;
-
+    
 }
 .slider-nav {
     padding-bottom: 100px;
@@ -839,7 +900,7 @@ a {
     background: url('..//img/mountain.jpg') center center no-repeat;
 }
 .product-background-color {
-    background: rgba(35,54,65,.7);
+     background: rgba(35,54,65,.7);
 }
 .product {
     padding-bottom: 215px;
@@ -942,6 +1003,7 @@ a {
     height: 185px;
     width: 100%;
     border: 1px solid #d1dddb;
+    resize: none;
 }
 .contact form > input {
     background: #18cfab;
@@ -966,7 +1028,7 @@ a {
     font-weight: 300;
     font-size: 14px;
     color: #b2b2b2;
-    text-transform: capitalize;
+    text-transform: capitalize;   
 }
 .social > div {
     width: 20%;
@@ -1030,7 +1092,7 @@ a {
 .recent div {
     clear: both;
     border-bottom: 2px solid #294453;
-    margin: 25px 0;
+    margin: 25px 0; 
 }
 .recent div:last-child {
     border-bottom: none;
